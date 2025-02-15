@@ -1,0 +1,285 @@
+/*import font from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Cinzel+Decorative:wght@400;700;900&family=Jersey+15&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yatra+One&display=swap');
+
+/*global style*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #ddd;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	border-style: none;
+	overflow: visible;
+}
+
+body {
+    background-color: #1a1a1a;
+    overflow-y: auto;
+}
+
+/*12 grid style*/
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.col-1 { width: 8.33%;}  
+.col-2 { width: 16.66%;}
+.col-3 { width: 25%;}  
+.col-4 { width: 33.33%;}
+.col-5 { width: 41.66%;}
+.col-6 { width: 50%;}  
+.col-7 { width: 58.33%;}
+.col-8 { width: 66.66%;}
+.col-9 { width: 75%;}  
+.col-10 { width: 83.33%;}
+.col-11 { width: 91.66%;}
+.col-12 { width: 100%;}
+
+
+/*demo color*/
+.blue{
+	background-color: cyan;
+	height: 100px;
+}
+.red{
+	background-color: red;
+	height: 100px;
+}
+
+/*main text*/
+.top{
+	margin-top: 5%;
+}
+h1{
+	letter-spacing: 3;
+	font-weight: 700;
+}
+h4{
+	letter-spacing: 2;
+	word-spacing: 5;
+	font-weight: 200;
+	animation: fadeSlide 2s ease-in-out forwards,
+		letterspacing 2s ease-in-out forwards;
+}
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes letterspacing{
+	0%{
+		letter-spacing: 2;
+	}
+	100%{
+		letter-spacing: 4;
+	}
+}
+
+/*company website link*/
+.search-box{
+	background-color: transparent;
+	padding: 2% 4%;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #526D82;
+	border-collapse: whitesmoke;
+	width: 50%;
+	text-align: left;
+}
+.search-box:focus{
+	width: 80%;
+	transition: 0.5s ease-in-out;
+}
+.search-box:not(:focus){
+	width: 50%;
+	transition: 0.5s ease-in-out;
+}
+.generate-btn{
+	width: 20%;
+	padding: 1% 2%;
+	background-color: #27374D;
+	border-radius: 10px;
+	letter-spacing: 1;
+}
+.generate-btn:hover{
+	cursor: pointer;
+	width: 25%;
+	transition: 0.4s ease-in-out;
+	background-color: #526D82;
+}
+.generate-btn:not(:hover){
+	transition: 0.4s ease-in-out;
+}
+
+
+
+/*card*/
+.card-left{
+	padding: 2% 0.5% 2% 2%;
+}
+.card-right{
+	padding: 2% 2% 2% 0.5%;
+}
+.card{
+	background-color: #31363F;
+	padding: 2%;
+	border-radius: 10px;
+}
+
+label{
+	letter-spacing: 1;
+}
+
+/*job description*/
+.table-job{
+	margin: 0 auto;
+	width: 85%;
+}
+.table-job tr td{
+	margin-top: 10%;
+	padding: 2%;
+}
+
+[class^="job-"]{
+	background-color: #1a1a1a;
+	padding: 2% 4%;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #526D82;
+	border-collapse: whitesmoke;
+	width: 100%;
+	text-align: left;
+}
+
+.job-description{
+	resize: none;
+	min-height: 150px;
+}
+
+.generate-btn2{
+	background-color: #222831;
+}
+
+
+/*cv upload*/
+.file-upload {
+    text-align: center;
+}
+
+#dropArea {
+    border: .5px dashed #526D82;
+    padding: 4.2%;
+    height: 45%;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: #ddd;
+    cursor: pointer;
+}
+
+#dropArea p {
+    margin: 0;
+}
+
+#dropArea.drag-over {
+    background-color: #27374D;
+}
+
+#browseBtn {
+    color: cyan;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#fileName {
+    color: #aaa;
+}
+
+
+
+/*media queries*/
+/*media queries*/
+/*media queries*/
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+    .col-3, .col-6 {
+        width: 100%;
+    }
+
+    .search-box {
+        width: 80%;
+    }
+
+    .search-box:focus {
+        width: 90%;
+    }
+
+    .generate-btn {
+        width: 40%;
+    }
+
+    .generate-btn:hover {
+        width: 45%;
+    }
+
+    .card-left, .card-right {
+        padding: 5%;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .search-box {
+        width: 80%;
+        padding: 3%;
+    }
+
+    .search-box:focus {
+        width: 90%;
+    }
+
+    .generate-btn {
+        width: 40%;
+        padding: 3%;
+    }
+
+    .generate-btn:hover {
+        width: 45%;
+    }
+
+    .table-job {
+        width: 100%;
+    }
+
+    #dropArea {
+        padding: 6%;
+    }
+}
