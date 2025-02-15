@@ -1,0 +1,139 @@
+<!DOCUMENT html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>inView - AI Driven Insights</title>
+
+		<!--styles-->
+		<link rel="stylesheet" href="static/css/style.css">
+
+		<!--scripts-->
+		<script src="static/js/script.js"></script>
+
+	</head>
+
+	<body>
+
+		<!--main heading-->
+		<div class="container">
+			<div class="row">
+				<div class="col col-3"></div>
+				<div class="col col-6 top">
+					<div class="row">
+						<div class="col-12">
+							<h1>inView</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<h4>AI Driven Insights</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col col-3"></div>
+			</div>
+
+			<!--company website-->
+			<div class="row">
+				<div class="col col-3"></div>
+				<div class="col col-6">
+					
+					<!--web input form-->
+					<form>
+						<div class="row">
+							<div class="col-12 top search-container">
+								<input type="text" class="search-box" placeholder="Enter Company Website" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12 top">
+								<input type="submit" class="generate-btn" value="Generate">
+							</div>
+						</div>
+					</form>
+
+				</div>
+				<div class="col col-3"></div>
+			</div>
+
+		</div>
+
+		<div class="container top">
+			<!--generate using cv or job description-->
+			<div class="row">
+
+				<!--cv upload-->
+				<div class="col col-6">
+					<div class="row card-left">
+						<div class="col-12 card"><br>
+							<label>Generate Using CV</label>
+							<table class="table-job">
+										<tr>
+											<td>
+												<div class="file-upload top">
+									<input type="file" id="fileInput" hidden>
+									<div id="dropArea">
+										<p>Drag & Drop your</p>
+										<p>Word, PDF</p>
+										<p>or</p>
+										<p><span id="browseBtn">Browse</span></p>
+									</div>
+									<p id="fileName" class="top">No file selected</p>
+								</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p id="fileName"></p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="submit" class="generate-btn generate-btn2" value="Generate">
+											</td>
+										</tr>
+									</table>
+						</div>
+					</div>
+				</div>
+
+				<!--job description-->
+				<div class="col col-6">
+					<div class="row card-right">
+						<div class="col-12 card"><br>
+							<label>Generate Using Job Description</label>
+							<div class="col-12">
+								<form>
+									<table class="table-job">
+										<tr>
+											<td>
+												<input type="text" class="job-title top" placeholder="Job Title">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<textarea class="job-description" rows="5" placeholder="Job Description"></textarea>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="submit" class="generate-btn generate-btn2" value="Generate">
+											</td>
+										</tr>
+									</table>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+
+</html>
