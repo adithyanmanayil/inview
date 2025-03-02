@@ -1,4 +1,4 @@
-<!DOCUMENT html>
+<!DOCTYPE html>
 
 <html>
 
@@ -43,15 +43,15 @@
 				<div class="col col-6">
 					
 					<!--web input form-->
-					<form>
+					<form name="web_search" method="POST" action="/result">
 						<div class="row">
 							<div class="col-12 top search-container">
-								<input type="text" class="search-box" placeholder="Enter Company Website" required>
+								<input type="text" class="search-box" placeholder="Enter Company Website" name="web_address" required>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-12 top">
-								<input type="submit" class="generate-btn" value="Generate">
+								<input type="submit" class="generate-btn" value="Generate" name="web_submit">
 							</div>
 						</div>
 					</form>
@@ -71,32 +71,34 @@
 					<div class="row card-left">
 						<div class="col-12 card"><br>
 							<label>Generate Using CV</label>
-							<table class="table-job">
-										<tr>
-											<td>
-												<div class="file-upload top">
-									<input type="file" id="fileInput" hidden>
-									<div id="dropArea">
-										<p>Drag & Drop your</p>
-										<p>Word, PDF</p>
-										<p>or</p>
-										<p><span id="browseBtn">Browse</span></p>
-									</div>
-									<p id="fileName" class="top">No file selected</p>
-								</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<p id="fileName"></p>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<input type="submit" class="generate-btn generate-btn2" value="Generate">
-											</td>
-										</tr>
-									</table>
+							<form name="cv_search" method="POST">
+								<table class="table-job">
+									<tr>
+										<td>
+											<div class="file-upload top">
+												<input type="file" id="fileInput" hidden>
+												<div id="dropArea">
+													<p>Drag & Drop your</p>
+													<p>Word, PDF</p>
+													<p>or</p>
+													<p><span id="browseBtn">Browse</span></p>
+												</div>
+												<p id="fileName" class="top">No file selected</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p id="fileName"></p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="submit" class="generate-btn generate-btn2" value="Generate">
+										</td>
+									</tr>
+								</table>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -107,16 +109,16 @@
 						<div class="col-12 card"><br>
 							<label>Generate Using Job Description</label>
 							<div class="col-12">
-								<form>
+								<form name="description_search" method="POST">
 									<table class="table-job">
 										<tr>
 											<td>
-												<input type="text" class="job-title top" placeholder="Job Title">
+												<input type="text" class="job-title top" placeholder="Job Title" name="job_name">
 											</td>
 										</tr>
 										<tr>
 											<td>
-												<textarea class="job-description" rows="5" placeholder="Job Description"></textarea>
+												<textarea class="job-description" rows="5" placeholder="Job Description" name="job_desc"></textarea>
 											</td>
 										</tr>
 										<tr>
